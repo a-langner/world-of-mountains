@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entstehung</title>
+    <style>
+        html {
+            scroll-behavior: smooth
+        }
+
+        section {
+            min-height: 100vh
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <header>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato&display=swap"
+            rel="stylesheet">
+
+        <img src="bilder/mountain-icon.svg" id="logo" ;>
+        <h1 id="Willkommen">Willkommen in der Welt der Berge!</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Einführung</a>
+        <a href="kriterien.html">Kriterien</a>
+        <a href="formen.html">Formen & Klima</a>
+        <a href="freizeitnutzung.html">Freizeitnutzung</a>
+        <a href="entstehung.html">Entstehung</a>
+        <a href="links.html">Links</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Entstehung von Bergen</h2><br>
+            <article>Berge sind in der Regel eine Folge der Plattentektonik der Erde oder vulkanischen Ursprungs.
+                Bewegen sich zwei Platten der Erdkruste gegeneinander, so wird an der „Knautschzone“ oft ein Gebirgszug
+                aufgeschoben. Deren Berge zeichnen sich durch schroffe Gestalt und große Höhe aus. Herausragende
+                Beispiele sind die Berge des Himalaya und der Anden, aber auch die der Alpen, des Balkangebirges oder
+                des Zagros.<br><br>
+
+                Mit zunehmendem geologischen Alter trägt die Erosion dazu bei, dass die Formen milder werden und die
+                Gebirge niedriger. Beispiele dazu bieten die deutschen Mittelgebirge.<br><br>
+
+                Neuere Forschungen deuten darauf hin, dass erstmals im Neoarchaikum die Voraussetzungen für das
+                Entstehen von höheren Bergen gegeben waren. In den Zeitaltern davor war die kontinentale Lithosphäre
+                aufgrund ihrer hohen Temperatur und zu geringen Dicke für topographische Erhöhungen von mehr als 2.500
+                Metern noch nicht ausreichend tragfähig.<br><br>
+
+                Mancher Steilhang im Hochgebirge macht sichtbar, dass Stein durchaus verformbar ist: es gibt
+                Gebirgs-Falten im Ausmaß hunderter Meter und Schichten, die wie ein Stapel Papier verbogen sind. Fast
+                jedes Gestein gibt nach, wenn die jährliche Bewegung nur einige Millimeter ausmacht. Auf raschere Kräfte
+                reagiert es spröde – vergleichbar dem Siegellack – und bricht.</article><br><br><br>
+
+            <pre>
+                    <img class="myImages" id="myImg" src="bilder/mountain-1462655_1280.jpg" alt="Picture 15, Placeholder">
+                    <img class="myImages" id="myImg" src="bilder/mountains-5795880_1280.jpg" alt="Picture 16, Placeholder">
+                    <img class="myImages" id="myImg" src="bilder/mountain-918442_1280.jpg" alt="Picture 17, Placeholder">
+            </pre>
+
+            <br><br><br>
+
+            <article>
+                Oft bringt die Tektonik oder Erosion die verschiedenen Gesteins­arten, aus denen viele Berge bestehen,
+                ans Tageslicht, was interessante geologische oder sogar paläontologische (in Form von Fossilien)
+                Einsichten ermöglichen kann. Auch Erze und Bergwerke sind ein Zeichen dieser Vielfalt. Oft wurden im
+                Laufe der Erdgeschichte an ältere Berge auch Sandstein­schichten oder Korallenriffe angelagert (Jura,
+                Dachsteingebirge, Leithagebirge, Westerwald).<br><br>
+
+                Im Bereich von Subduktionszonen, wo sich eine Platte der Erde unter eine andere schiebt, wird die untere
+                aufgeschmolzen. Die heiße Schmelze ist leichter als ihre Umgebung und dringt nach oben. Dies ist eine
+                Ursache des Vulkanismus, der ebenfalls für das Entstehen vieler Berge verantwortlich ist. Aktive und
+                auch ehemalige feuerspeiende Berge nennt man Vulkane.<br><br>
+
+                Eine in polnahen Gebieten vorkommende Gebirgsbildung ist die der Reliefumkehr: eine Mulde wird von
+                Gletschern mit Geröll aufgefüllt, wobei der Untergrund durch das Gewicht des Eises unter Druck steht.
+                Ziehen sich die Gletscher zurück, entspannt sich der Untergrund, und die Geröllfüllung kann teilweise
+                über die Höhe der Umgebung empor gehoben werden. So entstandene Erhebungen sind zum Beispiel am
+                Münsterländer Kiessandzug zu beobachten. Häufiger ist hingegen zu beobachten, dass ältere Bergschichten
+                durch ihre größere Härte stehen bleiben, während jüngere schneller verwittern.<br><br>
+
+                Berge können auf der Erde kaum höher als neun Kilometer emporragen. Dies liegt daran, dass die Basis
+                eines Bergs sich ab dieser Höhe aufgrund des enormen Lithostatischen Drucks verflüssigt und so die
+                Maximalhöhe festgelegt wird.</article><br><br><br>
+
+
+            <pre>
+                    <img class="myImages" id="myImg" src="bilder/river-5936684_1280.jpg" alt="Picture 18, Placeholder">
+                    <img class="myImages" id="myImg" src="bilder/mountains-1624284_1280.jpg" alt="Picture 19, Placeholder">
+            </pre>
+
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+
+            <script>
+                var modal = document.getElementById('myModal');
+                var images = document.getElementsByClassName('myImages');
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+
+                for (var i = 0; i < images.length; i++) {
+                    var img = images[i];
+                    img.onclick = function (evt) {
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                }
+
+                var span = document.getElementsByClassName("close")[0];
+
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+            </script>
+
+
+        </section>
+    </main>
+
+</body>
+
+<footer>
+    &#169 2021, Andreas Langner
+</footer>
+
+</html>

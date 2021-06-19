@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formen & Klima</title>
+    <style>
+        html {
+            scroll-behavior: smooth
+        }
+
+        section {
+            min-height: 100vh
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <header>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato&display=swap"
+            rel="stylesheet">
+
+        <img src="bilder/mountain-icon.svg" id="logo" ;>
+        <h1 id="Willkommen">Willkommen in der Welt der Berge!</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Einführung</a>
+        <a href="kriterien.html">Kriterien</a>
+        <a href="formen.html">Formen & Klima</a>
+        <a href="freizeitnutzung.html">Freizeitnutzung</a>
+        <a href="entstehung.html">Entstehung</a>
+        <a href="links.html">Links</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <main>
+
+        <section>
+            <h2>Formen</h2><br>
+            <article>Berge können als Bergkuppe abgerundet sein, oder als Bergspitze oder Horn pyramidenartig spitz und
+                schroff. Bei einem Tafelberg oder Stuhl kann die Höhe plateauartig flach sein. Der Berg kann als
+                Bergrücken langgezogen sein, kann aber auch den Ausgangspunkt für mehrere abzweigende Bergrücken bilden.
+                Berge können frei in der Landschaft stehen (wie beispielsweise Israels Berg Tabor), sind jedoch meist
+                Teil eines Gebirges.</article><br><br><br>
+
+            <pre>
+                    <img class="myImages" id="myImg" src="bilder/midnight-sun-in-lofoten-norway.jpg" alt="Midnight sun in Lofoten, Norway">
+                    <img class="myImages" id="myImg" src="bilder/landscape-1246854_1280.jpg" alt="Picture 8, Placeholder">
+            </pre>
+
+            <h2>Klima</h2><br>
+            <article>Je nach Sonnen- und Windexposition sowie geografischer Breite herrschen an einem Berg
+                unterschiedliche klimatische Verhältnisse, die wiederum die Vegetation beeinflussen. Die der Sonne
+                zugewandten Hänge sind wärmer als die im Schatten liegenden. Je nach Höhe des Berges sind an seinen
+                Flanken mehrere Höhenstufen mit verschiedenem Klima vertreten.</article>
+
+            <br><br><br>
+
+
+            <pre>
+                <img class="myImages" id="myImg" src="bilder/mountains-139012_1280.jpg" alt="Picture 9, Placeholder">
+                <img class="myImages" id="myImg" src="bilder/landscape-3779159_1280.jpg" alt="Picture 10, Placeholder">
+                <img class="myImages" id="myImg" src="bilder/homberg-1959229_1280.jpg" alt="Picture 11, Placeholder">
+            </pre>
+
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+
+            <script>
+                var modal = document.getElementById('myModal');
+                var images = document.getElementsByClassName('myImages');
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+
+                for (var i = 0; i < images.length; i++) {
+                    var img = images[i];
+                    img.onclick = function (evt) {
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                }
+
+                var span = document.getElementsByClassName("close")[0];
+
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+            </script>
+
+
+        </section>
+
+
+
+
+    </main>
+
+</body>
+
+<footer>
+    &#169 2021, Andreas Langner
+</footer>
+
+</html>

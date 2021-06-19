@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of Mountains</title>
+    <style>
+        /* For a smooth scrolling effect */
+        html {
+            scroll-behavior: smooth
+        }
+
+        /* This ensures that each section fills at least 100% of the browser window height (vh = viewport height). Can be removed if enough content is inserted into the sections. */
+        section {
+            min-height: 100vh
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <header>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato&display=swap"
+            rel="stylesheet">
+
+        <img src="bilder/mountain-icon.svg" id="logo" ;>
+        <h1 id="Willkommen">Willkommen in der Welt der Berge!</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Einführung</a>
+        <a href="kriterien.html">Kriterien</a>
+        <a href="formen.html">Formen & Klima</a>
+        <a href="freizeitnutzung.html">Freizeitnutzung</a>
+        <a href="entstehung.html">Entstehung</a>
+        <a href="links.html">Links</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <main>
+
+        <section>
+            <h2>Einführung</h2><br>
+            <article>Ein Berg ist eine Landform, die sich über die Umgebung erhebt. Er ist meist höher und steiler als
+                ein Hügel, wobei es keine Definition zur genauen Unterscheidung und Abgrenzung beider Geländeformen
+                gibt. Ein Berg sollte sich durch eine gewisse Eigenständigkeit auszeichnen, also genügend Abstand von
+                anderen Bergen und eine Mindesthöhe über einem Pass aufweisen. Gegenstück ist das Tal. <br><br>
+
+                Geologisch und geographisch zusammengehörige Berge bilden ein Gebirge oder einen Gebirgszug. Dabei wird
+                unterschieden zwischen Hochgebirgen und Mittelgebirgen. Einzelstehende Berge werden als Inselberg
+                bezeichnet.<br><br>
+
+                Die Benennung einer Geländeform durch den Menschen als eigenständiger Berg ist subjektiv und nicht
+                scharf von der Bezeichnung Gipfel abgegrenzt. Klar ist darum einzig, dass es mehr Gipfel als Berge gibt.
+                Im Normalfall wird ein Berg einen Haupt- und mehrere Nebengipfel aufweisen, da nach Definition der
+                Bergsteigervereinigungen schon ein Gegenanstieg von 30 Metern für einen Gipfel ausreicht.</article>
+            <br><br><br>
+
+            <pre>
+            <img class="myImages" id="myImg" src="bilder/World_mountains.PNG" alt="Weltkarte mit der Verteilung von Bergen">
+            </pre>
+            <br><br><br>
+
+
+            <h2>Etymologie</h2><br>
+            <article>Das gemeingermanische Wort mittelhochdeutsch berc, althochdeutsch berg beruht auf indogermanisch
+                bherḡos- ‚Berg‘ (Wurzelform: bhereḡh- ‚hoch, erhaben‘, eine Erweiterung von bher[ɘ]- ‚[sich] heben,
+                [sich] regen‘ → gebären). Der Begriff ist Teil der <a href="https://de.wikipedia.org/wiki/Swadesh-Liste"
+                    target="_blank">Swadesh-Liste</a>.</article>
+            <br><br><br>
+
+
+            <pre>
+            <img class="myImages" id="myImg" src="bilder/mountain-6086083_1280.jpg" alt="Picture 1, Placeholder">
+            <img class="myImages" id="myImg" src="bilder/mountains-540116_1280.jpg" alt="Picture 2, Placeholder">
+            <img class="myImages" id="myImg" src="bilder/alberta-2297204_1280.jpg" alt="Picture 3, Placeholder">
+            </pre>
+
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- The Close Button ;query selctor; get element by class name-->
+                <span class="close">&times;</span>
+
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img01">
+
+                <!-- Modal Caption (Image Text) -->
+                <div id="caption"></div>
+            </div>
+
+            <script>
+                // create references to the modal...
+                var modal = document.getElementById('myModal');
+                // to all images -- note I'm using a class!
+                var images = document.getElementsByClassName('myImages');
+                // the image in the modal
+                var modalImg = document.getElementById("img01");
+                // and the caption in the modal
+                var captionText = document.getElementById("caption");
+
+                // Go through all of the images with our custom class
+                for (var i = 0; i < images.length; i++) {
+                    var img = images[i];
+                    // and attach our click listener for this image.
+                    img.onclick = function (evt) {
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                }
+
+                var span = document.getElementsByClassName("close")[0];
+
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+            </script>
+
+
+        </section>
+
+
+    </main>
+
+</body>
+
+<footer>
+    &#169 2021, Andreas Langner
+</footer>
+
+</html>

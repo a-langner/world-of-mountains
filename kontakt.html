@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt & Impressum</title>
+    <style>
+        html {
+            scroll-behavior: smooth
+        }
+
+        section {
+            min-height: 100vh
+        }
+
+        ion-icon {
+            font-size: 35px;
+        }
+
+        ion-icon[name="logo-facebook"] {
+            color: #0b86ee;
+        }
+
+        ion-icon[name="logo-twitter"] {
+            color: #1da1f2;
+        }
+
+        ion-icon[name="logo-instagram"] {
+            color: #d62256;
+        }
+
+        ion-icon[name="logo-youtube"] {
+            color: #ff0000;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <header>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato&display=swap"
+            rel="stylesheet">
+
+        <img src="bilder/mountain-icon.svg" id="logo" ;>
+        <h1 id="Willkommen">Willkommen in der Welt der Berge!</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Einführung</a>
+        <a href="kriterien.html">Kriterien</a>
+        <a href="formen.html">Formen & Klima</a>
+        <a href="freizeitnutzung.html">Freizeitnutzung</a>
+        <a href="entstehung.html">Entstehung</a>
+        <a href="links.html">Links</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <main>
+        <section>
+
+            <article>
+                <form action="">
+                    <h2>Kontakt</h2><br>
+
+                    <input name="vorname" type="text" class="feedback-input" placeholder="Vorname" required><br><br>
+                    <input name="nachname" type="text" class="feedback-input" placeholder="Nachname" required><br><br>
+
+
+                    <textarea name="nachricht" class="feedback-input"
+                        placeholder="Nachricht oder Kommentar"></textarea><br><br>
+
+                    <label for="Bewertung">Ihre Bewertung unserer Seite:<br></label>
+
+                    <select name="Bewertung" id="Bewertung" class="feedback-input">
+                        <option value="1">1 - sehr gut</option>
+                        <option value="2">2 - gut</option>
+                        <option value="3">3 - befriedigend</option>
+                        <option value="4">4 - ausreichend</option>
+                        <option value="5">5 - mangelhaft</option>
+                        <option value="6">6 - ungenügend</option>
+                    </select><br><br>
+
+                    <input type="checkbox" name="Newsletter" value="Newsletter" id="Newsletter"><label
+                        for="Newsletter">&nbsp;&nbsp;Newsletter-Anmeldung</label><br><br>
+
+                    <input type="email" name="email" id="email" class="feedback-input" placeholder="EMail-Adresse"
+                        required><br><br>
+
+                    <input type="submit" name="senden" value="Absenden" id="senden"><label for="senden"></label>
+                    
+                    <br><br><br><br><br><br><br><br>
+                    <h2>Impressum</h2>
+                </form>
+            </article>
+
+
+
+            <article class="links">
+
+            <article class="impressum">
+                Andreas Langner<br>
+                Fakestreet 123<br>
+                04275 Leipzig
+            </article>
+            <a class="social_media" href="http://facebook.com" target="_blank">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a class="social_media" href="http://instagram.com" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a class="social_media" href="http://twitter.com" target="_blank">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+            <a class="social_media" href="http://youtube.com" target="_blank">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+            <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+        </article>
+
+        </section>
+
+
+
+
+    </main>
+
+</body>
+
+<footer>
+    &#169 2021, Andreas Langner
+</footer>
+
+</html>

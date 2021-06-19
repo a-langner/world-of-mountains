@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kriterien</title>
+    <style>
+        html {
+            scroll-behavior: smooth
+        }
+
+        section {
+            min-height: 100vh
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <header>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato&display=swap"
+            rel="stylesheet">
+
+        <img src="bilder/mountain-icon.svg" id="logo" ;>
+        <h1 id="Willkommen">Willkommen in der Welt der Berge!</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Einführung</a>
+        <a href="kriterien.html">Kriterien</a>
+        <a href="formen.html">Formen & Klima</a>
+        <a href="freizeitnutzung.html">Freizeitnutzung</a>
+        <a href="entstehung.html">Entstehung</a>
+        <a href="links.html">Links</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Kriterien für die Eigenständigkeit</h2><br>
+            <article>Mögliche Indizien dafür, ob ein Berg als eigenständig anzusehen ist oder als Nebengipfel eines
+                benachbarten höheren Berges gilt, sind seine Dominanz und seine Schartenhöhe. Eine Aufstellung gängiger
+                Kriterien findet sich unter Berggipfel.<br><br>
+
+                Was bei einem Berg als „hoch“ angesehen wird, ist stets relativ zur umgebenden Landschaft. So würden die
+                norddeutschen Dammer (115 bis 146 Meter) oder Hüttener Berge (92 bis 106 Meter) in der Schweiz nur als
+                Hügel gelten, wofür man in Deutschland oder auch in Österreich die Grenze bei etwa 300 Meter ansetzt.
+                Der Møllehøj als höchster Berg Dänemarks misst gerade einmal 170 Meter, und der Wilseder Berg überragt
+                mit 169 m ü. NN nicht nur die Lüneburger Heide, sondern sämtliche natürlichen Erhebungen im Umkreis von
+                100 Kilometern.<br><br>
+
+                Die Schartenhöhe und die Dominanz einer Erhebung können als Kriterien herangezogen werden, um einen
+                Gipfel als selbstständigen Berg zu klassifizieren. Im Hochgebirge gilt beispielsweise eine Schartenhöhe
+                von 100 Metern und eine Dominanz von etwa ein bis drei Kilometer als Mindestmaß, um von einem
+                eigenständigen Berg zu sprechen.</article>
+
+            <br><br><br>
+
+
+            <pre>
+                <img class="myImages" id="myImg" src="bilder/gerirangerfjord-per-ottar-walderhaug-fjordnorway.jpg" alt="Picture 4, Placeholder">
+                <img class="myImages" id="myImg" src="bilder/mountains-5946500_1280.jpg" alt="Picture 5, Placeholder">
+                <img class="myImages" id="myImg" src="bilder/fisherman-cabin-hamnoy-lofoten-islands-norway-NORWAY0320.jpg" alt="Picture 6, Placeholder">
+                </pre>
+
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+
+            <script>
+                var modal = document.getElementById('myModal');
+                var images = document.getElementsByClassName('myImages');
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+
+                for (var i = 0; i < images.length; i++) {
+                    var img = images[i];
+                    img.onclick = function (evt) {
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                }
+
+                var span = document.getElementsByClassName("close")[0];
+
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+            </script>
+
+
+        </section>
+
+
+    </main>
+
+</body>
+
+<footer>
+    &#169 2021, Andreas Langner
+</footer>
+
+</html>

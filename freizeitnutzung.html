@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freizeitnutzung</title>
+    <style>
+        html {
+            scroll-behavior: smooth
+        }
+
+        section {
+            min-height: 100vh
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <header>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato&display=swap"
+            rel="stylesheet">
+
+        <img src="bilder/mountain-icon.svg" id="logo" ;>
+        <h1 id="Willkommen">Willkommen in der Welt der Berge!</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Einführung</a>
+        <a href="kriterien.html">Kriterien</a>
+        <a href="formen.html">Formen & Klima</a>
+        <a href="freizeitnutzung.html">Freizeitnutzung</a>
+        <a href="entstehung.html">Entstehung</a>
+        <a href="links.html">Links</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Freizeitnutzung</h2><br>
+            <article>Seit dem 19. Jahrhundert wurden Berge als „Sportgeräte“ für den Alpinismus entdeckt, im Laufe des
+                20. Jahrhunderts entstand parallel zum traditionellen Bergsteigen das Extremklettern bzw. Freiklettern.
+                Auch andere Bergsportarten fanden zahlreiche Anhänger, etwa Skifahren, Snowboarden oder
+                Skitouren.<br><br>
+
+                Berge stehen für Beständigkeit und Unveränderlichkeit und finden in diesem Sinne in vielen Sprichwörtern
+                Erwähnung: „Wenn der Berg nicht zum Propheten kommt, muss der Prophet zum Berge gehen“. Viele Menschen
+                fühlen sich am Berg „dem Himmel näher“, und dieses Erlebnis ist Anregung zu Nachdenken oder Gebet. Als
+                „Leiter zu Gott“ tragen daher viele niedrige bis mittelhohe Berge eine Kapelle oder Gedenkstätte. In den
+                Hochgebirgen Europas und Amerikas tragen sie meist ein Gipfelkreuz.<br><br>
+
+                Viele Berge sind wegen ihrer Rundsicht bekannt oder beliebt. Wenn diese durch Wald behindert ist,
+                errichtet man eine Aussichtswarte. Häufig sind Vermessungspunkte oder besser trigonometrische Punkte
+                nahe beim Gipfel unerlässlich.</article>
+
+            <br><br><br>
+
+
+            <pre>
+                    <img class="myImages" id="myImg" src="bilder/mountains-690104_1280.jpg" alt="Picture 12, Placeholder">
+                    <img class="myImages" id="myImg" src="bilder/yellow-3123271_1280.jpg" alt="Picture 13, Placeholder">
+                    <img class="myImages" id="myImg" src="bilder/mountains-1761292_1280.jpg" alt="Picture 14, Placeholder">
+            </pre>
+
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+
+            <script>
+                var modal = document.getElementById('myModal');
+                var images = document.getElementsByClassName('myImages');
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+
+                for (var i = 0; i < images.length; i++) {
+                    var img = images[i];
+                    img.onclick = function (evt) {
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+                }
+
+                var span = document.getElementsByClassName("close")[0];
+
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+            </script>
+
+
+        </section>
+    </main>
+
+</body>
+
+<footer>
+    &#169 2021, Andreas Langner
+</footer>
+
+</html>
